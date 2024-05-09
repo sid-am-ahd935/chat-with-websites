@@ -16,6 +16,8 @@ from langchain_community.llms import HuggingFaceHub
 from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 
 load_dotenv(find_dotenv())
+# repo_id= "google/flan-t5-xxl"
+repo_id= "meta-llama/Meta-Llama-3-8B-Instruct"
 
 def get_vectorstore_from_url(url):
     # get the text in document form
@@ -35,7 +37,7 @@ def get_vectorstore_from_url(url):
 
 def get_context_retriever_chain(vector_store):
     # llm = ChatOpenAI()
-    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+    llm = HuggingFaceHub(repo_id=repo_id, model_kwargs={"temperature":0.5, "max_length":512})
     
     retriever = vector_store.as_retriever()
     
@@ -52,7 +54,7 @@ def get_context_retriever_chain(vector_store):
 def get_conversational_rag_chain(retriever_chain): 
     
     # llm = ChatOpenAI()
-    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+    llm = HuggingFaceHub(repo_id=repo_id, model_kwargs={"temperature":0.5, "max_length":512})
     
     prompt = ChatPromptTemplate.from_messages([
       ("system", "Answer the user's questions based on the below context:\n\n{context}"),
