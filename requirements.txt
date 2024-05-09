@@ -9,4 +9,4 @@ beautifulsoup4==4.12.2
 huggingface-hub==0.14.1
 InstructorEmbedding==1.0.1
 sentence-transformers==2.2.2
-torch-2.3.0
+torch==2.3.0
