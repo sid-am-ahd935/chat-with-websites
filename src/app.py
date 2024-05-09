@@ -12,8 +12,8 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 # For HuggingFace and not OpenAI
-from langchain.llms import HuggingFaceHub
-from langchain.embeddings import HuggingFaceInstructEmbeddings
+from langchain_community.llms import HuggingFaceHub
+from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 
 load_dotenv(find_dotenv())
 
