@@ -6,3 +6,9 @@ python-dotenv==1.0.1
 streamlit==1.30.0
 chromadb==0.3.29
 beautifulsoup4==4.12.2
+# uncomment to use huggingface llms
+# huggingface-hub==0.14.1
+
+# uncomment to use instructor embeddings
+# InstructorEmbedding==1.0.1
+# sentence-transformers==2.2.2
